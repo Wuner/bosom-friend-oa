@@ -22,6 +22,15 @@ import {
   button,
   table,
   tableColumn,
+  row,
+  col,
+  datePicker,
+  select,
+  option,
+  tag,
+  pagination,
+  form,
+  formItem,
 } from 'element-ui';
 Vue
 .use(menu)
@@ -37,6 +46,15 @@ Vue
 .use(button)
 .use(table)
 .use(tableColumn)
+.use(row)
+.use(col)
+.use(datePicker)
+.use(select)
+.use(option)
+.use(tag)
+.use(pagination)
+.use(form)
+.use(formItem)
 .use(container);
 Vue.config.productionTip = false
 /* eslint-disable no-new */

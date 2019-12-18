@@ -5,7 +5,14 @@
     <div class="systemContentFillingEdit">
       <el-input class="input" v-model="titleVal" placeholder="请输入标题"></el-input>
       <ueditor class="ueditor" :defaultMsg=value :config=config ref="ue"></ueditor>
-      <el-button class="button" type="primary">添加附件</el-button>
+      <div class="button">
+        <el-button class="buttonAdd" type="primary">添加附件</el-button>
+        <div class="buttonRight">
+          <el-button class="buttonSubmit" type="primary">确定</el-button>
+          <el-button class="buttonCancel" type="danger">取消</el-button>
+          <el-button class="buttonHelp" type="success">使用帮助</el-button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -16,12 +23,12 @@
     components: {ueditor},
     data () {
       return {
-        title: 'OA网络办公室系统',
+        title: '报告提交',
         value: '',
         titleVal: '',
         config: {
           initialFrameWidth: null,
-          initialFrameHeight: 380
+          initialFrameHeight: 360
         }
       }
     },
@@ -47,9 +54,13 @@
     }
     &Edit {
       background-color: white;
-      padding: 20px;
+      padding: 10px 20px;
       .input, .ueditor, .button {
         margin-top: 10px;
+      }
+      .button{
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
